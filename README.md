@@ -31,7 +31,7 @@ Sistem iki ana aşamadan oluşmaktadır:
                  XGBoost Modeli
                          |
                          ↓
-              Tahminlenen Talep
+              Tahminlenen Talep veya DatasetA
                          |
                          ↓
               Google OR-Tools MIP
