@@ -119,9 +119,14 @@ def tam_otomatik_tahmin_fabrikasi(master_excel_yolu, model_yolu, encoder_yolu, c
 # ÇALIŞTIRMA
 # ==========================================
 if __name__ == "__main__":
-    MASTER_DB = r"C:\Users\bozku\Desktop\model_tahmin\MODEL1_READY_MASTER_DATASET_2_ESKİ.xlsx" 
-    MODEL_DOSYASI = r"C:\Users\bozku\Desktop\model_tahmin\01_xgboost_sampiyon_model.pkl"
-    ENCODER_DOSYASI = r"C:\Users\bozku\Desktop\model_tahmin\01_target_encoder.pkl"
-    YARISMA_TESLIM_DOSYASI = r"C:\Users\bozku\Desktop\model_tahmin\11_17_MAYIS_YARISMA_TESLIM_vol3_FINAL.xlsx"
+    
+    # Bu betiğin (çalışan python dosyasının) bulunduğu klasörün tam yolunu dinamik olarak alır
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    # Dosya yollarını işletim sistemine uygun şekilde (Windows/Linux/Mac) otomatik birleştirir
+    MASTER_DB = os.path.join(BASE_DIR, "MODEL1_READY_MASTER_DATASET_2_ESKİ.xlsx") 
+    MODEL_DOSYASI = os.path.join(BASE_DIR, "01_xgboost_sampiyon_model.pkl")
+    ENCODER_DOSYASI = os.path.join(BASE_DIR, "01_target_encoder.pkl")
+    YARISMA_TESLIM_DOSYASI = os.path.join(BASE_DIR, "11_17_MAYIS_YARISMA_TESLIM_vol3_FINAL.xlsx")
     
     tam_otomatik_tahmin_fabrikasi(MASTER_DB, MODEL_DOSYASI, ENCODER_DOSYASI, YARISMA_TESLIM_DOSYASI)
