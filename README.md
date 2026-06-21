@@ -20,14 +20,14 @@ Zaman serisi verilerindeki eksik günleri, tatil/kriz etkilerini ve "Haftalık D
 
 Proje temel olarak iki ana bacaktan oluşmaktadır: **Eğitim (Training)** ve **Tahmin (Inference)**.
 
-### 1. `01_model_train_colab.py` (Model Eğitim Fabrikası)
+### 1. `Model_Train.ipynb` (Model Eğitim Fabrikası)
 * **Ortam:** Google Colab (GPU gücü kullanılarak hızlı eğitim için tasarlandı).
 * **Görev:** Master veri setini alır, nükleer veri temizliği yapar (Target Leakage önleme), RandomSearchCV ile XGBoost için en optimum hiperparametreleri avlar. Kategorik değişkenler için Target Encoder eğitilir.
 * **Çıktı:** Bilgisayarınıza indirmeniz gereken iki adet zeka dosyası üretir:
   * `xgboost_sampiyon_model.pkl` (Eğitilmiş model ağı)
   * `target_encoder.pkl` (Kategorik veri dönüştürücü)
 
-### 2. `02_model_predict_local.py` (Tam Otomatik Tahmin Boru Hattı)
+### 2. `Model_Predict.py` (Tam Otomatik Tahmin Boru Hattı)
 * **Ortam:** Lokal makine (VS Code vb.)
 * **Görev:** İstenen gelecek tarih aralığı (Örn: 11-17 Mayıs) için otomatik olarak bir Excel iskeleti oluşturur. Master veritabanına bağlanıp, iteratif olarak geçmiş günlerin temiz lag değerlerini bulur. `.pkl` dosyalarını uykudan uyandırır ve tahminleri üretir.
 * **Çıktı:** Sadece istenen sütunları (`Tarih`, `Rota_Adi`, `Tahmin_Edilen_Desi`) içeren nihai yarışma/teslim dosyasını basar (`11_17_MAYIS_YARISMA_TESLIM_FINAL.xlsx`).
