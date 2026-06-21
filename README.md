@@ -156,11 +156,6 @@ Kapsam:
 17 Mayıs 2026
 ```
 
-Toplam:
-
-```
-137 gün
-```
 
 Çıktılar:
 
