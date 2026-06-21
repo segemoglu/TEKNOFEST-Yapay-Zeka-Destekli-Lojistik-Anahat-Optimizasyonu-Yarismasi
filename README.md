@@ -18,6 +18,9 @@ Sistem iki ana aşamadan oluşmaktadır:
    * Minimum maliyetli araç planlama
 
 ---
+* Tüm zamanların araç planlama maliyeti ve zamanı **134,886,444.86 TL** - **1784.47 saniye**
+* Sadece son haftanın planlama maliyeti ve zamanı **8,414,505.21 TL** - **119.60 saniye**
+---
 
 # 🏗️ Sistem Mimarisi
 
@@ -164,6 +167,11 @@ Arac_Planlama_v2.xlsx
 optimzasyon_v2.log
 ```
 
+Sonuç:
+```
+134,886,444.86 TL - 1784.47 saniye
+```
+
 ---
 
 ## optimizasyon_v2_son_hafta.py
@@ -186,6 +194,11 @@ Avantaj:
 ```
 Arac_Planlama_v2_son_hafta.xlsx
 optimizasyon_v2_son_hafta.log
+```
+
+Sonuç:
+```
+8,414,505.21 TL - 119.60 saniye
 ```
 
 ---
