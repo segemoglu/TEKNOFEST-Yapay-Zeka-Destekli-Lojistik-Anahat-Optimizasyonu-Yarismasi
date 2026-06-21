@@ -124,9 +124,9 @@ if __name__ == "__main__":
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
     # Dosya yollarını işletim sistemine uygun şekilde (Windows/Linux/Mac) otomatik birleştirir
-    MASTER_DB = os.path.join(BASE_DIR, "MODEL1_READY_MASTER_DATASET_2_ESKİ.xlsx") 
+    MASTER_DB = os.path.join(BASE_DIR, "MODEL_READY_MASTER_DATASET_.xlsx") 
     MODEL_DOSYASI = os.path.join(BASE_DIR, "01_xgboost_sampiyon_model.pkl")
     ENCODER_DOSYASI = os.path.join(BASE_DIR, "01_target_encoder.pkl")
-    YARISMA_TESLIM_DOSYASI = os.path.join(BASE_DIR, "11_17_MAYIS_YARISMA_TESLIM_vol3_FINAL.xlsx")
+    YARISMA_TESLIM_DOSYASI = os.path.join(BASE_DIR, "11_17_MAYIS_YARISMA_TESLIM_FINAL.xlsx")
     
     tam_otomatik_tahmin_fabrikasi(MASTER_DB, MODEL_DOSYASI, ENCODER_DOSYASI, YARISMA_TESLIM_DOSYASI)
